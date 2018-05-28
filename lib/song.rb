@@ -48,9 +48,7 @@ class Song
   	elsif self.all.detect{|song| song.name == name} 
   		self.all.detect{|song| song.name == name}
   	else 
-  		@name = name 
-  		@@all << self.new(@name)
-  		self.all.detect{|song| song.name == name}
+  	  self.create_by_name
   	end
   end
   
