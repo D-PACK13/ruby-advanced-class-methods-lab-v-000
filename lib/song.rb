@@ -65,9 +65,10 @@ class Song
     self.all.detect{|song| song.name == name.split(" - ")[1].chomp(".mp3")}
   end
   
+  
+  
+  
   def self.destroy_all
     self.all.clear
   end
-
-  
 end
