@@ -64,6 +64,8 @@ class Song
     @@all << self.new(@name, @artist_name)
     self.all.detect{|song| song.name == name.split(" - ")[1].chomp(".mp3")}
   end
+  
+  
 
   
 end
