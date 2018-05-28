@@ -54,6 +54,16 @@ class Song
   	end
   end
   
-  
+  def self.alphabetical
+    @@all.sort_by {|song| song.name}
+  end 
+
+  def self.new_from_filename(name)
+    @name = name.split(" - ")[1].chomp(".mp3")
+    @artist_name = name.split(" - ")[0]
+    @@all << self.new(@name, @artist_name)
+    self.all.detect{|song| song.name == name.split(" - ")[1].chomp(".mp3")}
+  end
+
   
 end
