@@ -39,4 +39,7 @@ class Song
   	@name = name
   	self.all.detect{|song| song.name == name}
   end
+  
+  
+  
 end
