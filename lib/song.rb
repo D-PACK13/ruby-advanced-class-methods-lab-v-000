@@ -43,9 +43,9 @@ class Song
   def self.find_or_create_by_name(name)
   	self.find_by_name
   	if @@all == []
-  	  
-  		
-  		
+      @name = name 
+  		@@all << self.new(@name)
+  		self.all.detect{|song| song.name == name}
   	elsif self.all.detect{|song| song.name == name} 
   		self.all.detect{|song| song.name == name}
   	else 
