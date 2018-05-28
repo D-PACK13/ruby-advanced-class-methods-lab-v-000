@@ -29,5 +29,10 @@ class Song
     self.all.detect{|song| song.name == name}
   end
   
+  def self.create_by_name(name)
+  	@name = name
+	  @@all << self.new(@name)
+  	self.all.detect{|song| song.name == name}
+  end 
   
 end
